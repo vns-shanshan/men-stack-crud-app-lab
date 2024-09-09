@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= food.name %></title>
+  </head>
+  <body>
+    <h1><%= food.name %></h1>
+
+    <p>Category: <%= food.category %></p>
+    <p>Calories: <%= food.calories %></p>
+
+    <% if (food.isDelivered) { %>
+    <p>Enjoy your <%= food.name %>!</p>
+    <% } else { %>
+    <p><%= food.name %> not ready.</p>
+    <% } %>
+
+    <a href="/food">Back to Food List</a>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Food</title>
+  </head>
+  <body>
+    <h1>New Food</h1>
+
+    <form action="/food" method="POST">
+      <label for="name">Name: </label>
+      <input type="text" name="name" id="name" />
+
+      <label for="category">Category: </label>
+      <input type="text" name="category" id="category" />
+
+      <label for="calories">Calories: </label>
+      <input type="number" name="calories" id="calories" />
+
+      <label for="isDelivered">Delivered? </label>
+      <input type="checkbox" name="isDelivered" id="isDelivered" />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

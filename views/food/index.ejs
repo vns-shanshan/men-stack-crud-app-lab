@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Food List</title>
+</head>
+
+<body>
+  <h1>Food List</h1>
+  <ul>
+    <% foodList.forEach(food => { %>
+    <li>
+      <a href="/food/<%= food._id %>"><%= food.name %></a>
+      <a href="/food/<%= food._id %>/edit">Edit <%= food.name %></a>
+
+      <form action="/food/<%= food._id %>?_method=DELETE" method="POST">
+        <button value="submit">DELETE FOOD</button>
+      </form>
+    </li>
+    <% }) %>
+  </ul>
+</body>
+
+</html>
